@@ -14,8 +14,8 @@
                 <!--CRUD Operations-->
                 <form onsubmit="event.preventDefault();onFormSubmit()" autocomplete="off">
                 <div>
-                    <label>Drug code</label>
-                    <input type ="text" name="D_code" id="D_code">
+                    <label>Drug code*</label>
+                    <input type ="text" name="D_code" id="D_code"><label class="validation-error hide" id="DrugcodeValidationError">This field is to fill</label>
                 </div>
                 <div>
                     <label>Drug Name</label>

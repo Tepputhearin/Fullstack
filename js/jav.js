@@ -1,5 +1,7 @@
  selectedRow = null;
 function onFormSubmit(){
+    if(validate()){
+        
     var formData = readFormData();
     if (selectedRow == null){
     insertNewRecord(formData);
@@ -8,6 +10,7 @@ function onFormSubmit(){
     updateRecord(formData);
 }
     resetForm();
+}
 }
 function readFormData(){
     var formData = {};
@@ -63,6 +66,18 @@ function onDelete(td){
         resetForm();
     }
 
+}
+function validate(){
+    isValid = true;
+    if (document.getElementById("D_code").value ==""){
+        isValid = false;
+        document.getElementById("DrugcodeValidationError").classList.remove("hide");
+    } else{
+        isValid = true;
+        if(!document.getElementById("DrugcodeValidationError").classList.contains("hide"))
+        document.getElementById("DrugcodeValidationError").classList.add("hide");
+    }
+    return isValid;
 }
 
 function resetForm(){
