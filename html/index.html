@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management system</title>
+</head>
+<link rel="stylesheet" href="../css/style.css">
+<body>
+    <table>
+        <tr>
+            <tb>
+                <!--CRUD Operations-->
+                <form onsubmit="event.preventDefault();onFormSubmit()" autocomplete="off">
+                <div>
+                    <label>Drug code</label>
+                    <input type ="text" name="D_code" id="D_code">
+                </div>
+                <div>
+                    <label>Drug Name</label>
+                    <input type = "text" name="D_name" id="D_name">
+                </div>
+                <div>
+                    <label>Price</label>
+                    <input type = "text" name="D_price" id="D_price">
+                </div>
+                <div>
+                    <label>Quantity</label>
+                    <input type ="text" name="D_quantity" id="D_quantity">
+                </div>
+                <div>
+                    <label>Purchase Date</label>
+                    <input type ="date" name="D_pur" id="D_pur">
+                </div>
+                <div>
+                    <label>Expiration Date</label>
+                    <input type ="date" name="D_ex" id="D_ex">
+                </div>
+                <div class="form-action-button">
+                    <input type="submit" value="Submit">
+                </div>
+                </form>
+            </tb>
+            <tb>
+                <table class="list" id="Drug_list">
+                    <thread>
+                        <tr>
+                            <th>Drug code</th>
+                            <th>Drug Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Purchase Date</th>
+                            <th>Expiration Date</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </tb>
+        </tr>
+    </table>
+
+    <script src="../js/jav.js"></script>
+</body>
+</html>
